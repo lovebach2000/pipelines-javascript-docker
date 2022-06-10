@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: lovebachpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lovebachpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: lovebachpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: lovebachpipelinesjavascriptdocker 
+          image: user17acr2.azurecr.io/lovebachpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
